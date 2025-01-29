@@ -1,6 +1,4 @@
 # Semantic-Video-Segmentation
-Here’s the updated `README.md` file after removing the **RAG (Retrieval-Augmented Generation)** and **YouTube link processing** parts. The application now focuses solely on processing uploaded video files, extracting audio, and transcribing the content.
-
 ---
 
 # Video Processing Application
