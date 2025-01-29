@@ -1,0 +1,625 @@
+[
+    {
+        "chunk_id": 1,
+        "start_time": 0.0,
+        "end_time": 8.88,
+        "text": " What's the first thing you should do when your code throws an error?  Obviously, you should change nothing and try to run it again a few times.  If that doesn't work, you're going to need a computer science degree.",
+        "audio_file": "chunk_1.wav"
+    },
+    {
+        "chunk_id": 2,
+        "start_time": 8.88,
+        "end_time": 16.240000000000002,
+        "text": " The awesome thing about software engineering is that you can learn to code and get a high-paying job,  while literally having no idea how anything actually works.",
+        "audio_file": "chunk_2.wav"
+    },
+    {
+        "chunk_id": 3,
+        "start_time": 16.240000000000002,
+        "end_time": 24.8,
+        "text": " It all just feels like magic, like a pilot driving a giant metal tube in the sky,  while knowing nothing about hero dynamics.  Mother god, no!  Oh shit!",
+        "audio_file": "chunk_3.wav"
+    },
+    {
+        "chunk_id": 4,
+        "start_time": 24.8,
+        "end_time": 34.64,
+        "text": " Welcome to Computer Science 101.  In today's video, you'll learn the science behind the garbage code you've been writing  by learning 101 different computer science terms and concepts.  This is a computer.",
+        "audio_file": "chunk_4.wav"
+    },
+    {
+        "chunk_id": 5,
+        "start_time": 34.64,
+        "end_time": 42.72,
+        "text": " It's just a piece of tape that holds ones and zeros,  along with a device that can read and write to it.  It's called a terrain machine, and in theory, it can compute anything.",
+        "audio_file": "chunk_5.wav"
+    },
+    {
+        "chunk_id": 6,
+        "start_time": 42.72,
+        "end_time": 49.84,
+        "text": " Like the graphics in this video, or the algorithm that recommended that you watch it.  At the core of modern computers, we have the central processing unit.",
+        "audio_file": "chunk_6.wav"
+    },
+    {
+        "chunk_id": 7,
+        "start_time": 49.84,
+        "end_time": 58.72,
+        "text": " If we crack it open, we find a piece of silicon that contains billions of tiny transistors,  which are like microscopic on-off switches.  The value at one of these switches is called a bit,",
+        "audio_file": "chunk_7.wav"
+    },
+    {
+        "chunk_id": 8,
+        "start_time": 58.72,
+        "end_time": 66.08,
+        "text": " and is the smallest piece of information a computer can use.  However, one bit by itself is not very useful,  so they come in a package of eight called a byte.",
+        "audio_file": "chunk_8.wav"
+    },
+    {
+        "chunk_id": 9,
+        "start_time": 66.08,
+        "end_time": 73.28,
+        "text": " One byte can represent 256 different values,  like all the characters that you type on your keyboard.  In fact, when you type into your keyboard,",
+        "audio_file": "chunk_9.wav"
+    },
+    {
+        "chunk_id": 10,
+        "start_time": 73.28,
+        "end_time": 81.44,
+        "text": " the character produced is actually mapped to a binary value  in a character encoding like ASCII or UTF-8.  Binary is just a system for counting,",
+        "audio_file": "chunk_10.wav"
+    },
+    {
+        "chunk_id": 11,
+        "start_time": 81.44,
+        "end_time": 89.12,
+        "text": " like the base 10 system you normally use when counting on your fingers.  But it only has two characters, one and zero.  Humans have a hard time reading binary,",
+        "audio_file": "chunk_11.wav"
+    },
+    {
+        "chunk_id": 12,
+        "start_time": 89.12,
+        "end_time": 97.60000000000001,
+        "text": " so most often it's represented in a hexadecimal-based 16 format,  where 10 numbers and six letters can represent a four-bit group called a nibble.",
+        "audio_file": "chunk_12.wav"
+    },
+    {
+        "chunk_id": 13,
+        "start_time": 97.60000000000001,
+        "end_time": 106.4,
+        "text": " As a developer, when you write code in a programming language,  it will eventually be converted into machine code,  which is a binary format that can be decoded and executed by the CPU.",
+        "audio_file": "chunk_13.wav"
+    },
+    {
+        "chunk_id": 14,
+        "start_time": 106.4,
+        "end_time": 115.76,
+        "text": " What it doesn't do, though, is store data for your applications.  For that, computers have random access memory or RAM.  It's like a neighborhood, and inside of every house, lives a bite.",
+        "audio_file": "chunk_14.wav"
+    },
+    {
+        "chunk_id": 15,
+        "start_time": 115.76,
+        "end_time": 124.72,
+        "text": " Every location has a memory address,  which the CPU can read and write, too.  You can think of the CPU and RAM as the brain of the computer,  but in order for a computer to be useful,",
+        "audio_file": "chunk_15.wav"
+    },
+    {
+        "chunk_id": 16,
+        "start_time": 124.72,
+        "end_time": 134.0,
+        "text": " it needs to handle input and output.  An input device might be the keyboard and mouse,  while an output device might be your monitor.  Luckily, most developers don't need to worry about how this hardware fits together,",
+        "audio_file": "chunk_16.wav"
+    },
+    {
+        "chunk_id": 17,
+        "start_time": 134.0,
+        "end_time": 142.8,
+        "text": " because we have operating system kernels,  like Linux, Mac, and Windows,  that control all hardware resources via device drivers.  Now, to start hacking on the operating system,",
+        "audio_file": "chunk_17.wav"
+    },
+    {
+        "chunk_id": 18,
+        "start_time": 142.8,
+        "end_time": 150.56,
+        "text": " your first entry point is the shell,  which is a program that exposes the operating system to the end user.  It's called a shell, because it wraps the kernel.",
+        "audio_file": "chunk_18.wav"
+    },
+    {
+        "chunk_id": 19,
+        "start_time": 150.56,
+        "end_time": 159.36,
+        "text": " It takes a line of text as input, and produces an output.  This is called a command line interface.  Not only can it connect to your own computer,  but with the secure shell protocol,",
+        "audio_file": "chunk_19.wav"
+    },
+    {
+        "chunk_id": 20,
+        "start_time": 159.36,
+        "end_time": 168.32,
+        "text": " it can also connect to remote computers over a network.  Now that you have access to the mainframe,  it's time to pick a programming language,  which is a tool that uses the abstraction principle",
+        "audio_file": "chunk_20.wav"
+    },
+    {
+        "chunk_id": 21,
+        "start_time": 168.4,
+        "end_time": 177.92,
+        "text": " to make computers practical to work with for humans.  By simplifying different systems layer by layer,  some languages like Python are interpreted.  That means there's a program called an interpreter",
+        "audio_file": "chunk_21.wav"
+    },
+    {
+        "chunk_id": 22,
+        "start_time": 177.92,
+        "end_time": 187.35999999999999,
+        "text": " that will execute each line of code one by one.  Other languages like C++ are compiled.  They use a compiler to convert the entire program  into machine code in advance,",
+        "audio_file": "chunk_22.wav"
+    },
+    {
+        "chunk_id": 23,
+        "start_time": 187.35999999999999,
+        "end_time": 194.95999999999998,
+        "text": " before the CPU attempts to execute it.  This results in an executable file  that can be run by the operating system  without any extra dependencies.",
+        "audio_file": "chunk_23.wav"
+    },
+    {
+        "chunk_id": 24,
+        "start_time": 195.04000000000002,
+        "end_time": 204.72,
+        "text": " Now, every programming language has a variety of built-in data types  to represent the data we're working with in our code.  Instead of bytes, we work with more human-friendly things  like characters and numbers.",
+        "audio_file": "chunk_24.wav"
+    },
+    {
+        "chunk_id": 25,
+        "start_time": 204.72,
+        "end_time": 213.68,
+        "text": " Now, the most fundamental way to use data in your application  is to declare a variable.  This attaches a name to a data point,  allowing you to reuse it somewhere else in your code.",
+        "audio_file": "chunk_25.wav"
+    },
+    {
+        "chunk_id": 26,
+        "start_time": 213.68,
+        "end_time": 222.24,
+        "text": " Python is a dynamically typed language,  which means we don't need to tell the program exactly  which data type is assigned to a variable.  It just figures it out automatically.",
+        "audio_file": "chunk_26.wav"
+    },
+    {
+        "chunk_id": 27,
+        "start_time": 222.32000000000002,
+        "end_time": 229.76000000000002,
+        "text": " However, other languages like C are statically typed,  and that means you need to specify the data type  of a variable in your code.  When you define a variable,",
+        "audio_file": "chunk_27.wav"
+    },
+    {
+        "chunk_id": 28,
+        "start_time": 229.76000000000002,
+        "end_time": 239.44,
+        "text": " its value is stored somewhere in memory on the hardware,  and you may need to allocate and free up memory  throughout the program.  A pointer is a variable whose value is the memory address",
+        "audio_file": "chunk_28.wav"
+    },
+    {
+        "chunk_id": 29,
+        "start_time": 239.44,
+        "end_time": 248.32000000000002,
+        "text": " of another variable,  which can be used for low-level memory control.  Many languages don't want to deal with low-level memory management  and instead implement a garbage collector,",
+        "audio_file": "chunk_29.wav"
+    },
+    {
+        "chunk_id": 30,
+        "start_time": 248.32000000000002,
+        "end_time": 263.03999999999996,
+        "text": " which automatically allocates and de-allocates memory  when an object is no longer referenced in the program.  Now, the data types available are different  in every programming language,",
+        "audio_file": "chunk_30.wav"
+    },
+    {
+        "chunk_id": 31,
+        "start_time": 263.03999999999996,
+        "end_time": 271.68,
+        "text": " but typically you'll find int to represent whole numbers,  which may or may not be signed or unsigned  to represent negative numbers as well.  When numbers require a decimal point,",
+        "audio_file": "chunk_31.wav"
+    },
+    {
+        "chunk_id": 32,
+        "start_time": 271.68,
+        "end_time": 281.44,
+        "text": " they typically use the floating point type.  It's called a float,  because there's only enough memory  to represent a certain range of numbers  at a certain precision,  and is basically a form of scientific notation",
+        "audio_file": "chunk_32.wav"
+    },
+    {
+        "chunk_id": 33,
+        "start_time": 281.44,
+        "end_time": 291.28000000000003,
+        "text": " to make computers faster.  If you need more range or precision,  many languages also have a double  that doubles the amount of memory used for the number.  Now, when it comes to characters,  you'll typically find the char data type",
+        "audio_file": "chunk_33.wav"
+    },
+    {
+        "chunk_id": 34,
+        "start_time": 291.28000000000003,
+        "end_time": 299.6,
+        "text": " to represent a single character,  or more commonly a string  to represent multiple characters together.  Ultimately, these characters get stored  in a memory address somewhere,",
+        "audio_file": "chunk_34.wav"
+    },
+    {
+        "chunk_id": 35,
+        "start_time": 299.6,
+        "end_time": 309.2,
+        "text": " but they need to be stored in a certain order.  When the order starts with the most significant bite  in the smallest memory address,  it's called Big Indian,  or vice versa,  but if the least significant bite is stored",
+        "audio_file": "chunk_35.wav"
+    },
+    {
+        "chunk_id": 36,
+        "start_time": 309.2,
+        "end_time": 317.76,
+        "text": " in the smallest address,  it's called Little Indian.  When it comes to practical software engineering,  one of the most fundamental things we do  is organized data into data structures.",
+        "audio_file": "chunk_36.wav"
+    },
+    {
+        "chunk_id": 37,
+        "start_time": 317.76,
+        "end_time": 325.04,
+        "text": " The most useful data structure is probably the array,  or list, just like a shopping list,  it organizes multiple data points in order.",
+        "audio_file": "chunk_37.wav"
+    },
+    {
+        "chunk_id": 38,
+        "start_time": 325.04,
+        "end_time": 333.92,
+        "text": " However, it also maintains an index of integers  that starts at zero and goes up for every new item in the list.  That can be useful,  but you don't actually need an index",
+        "audio_file": "chunk_38.wav"
+    },
+    {
+        "chunk_id": 39,
+        "start_time": 333.92,
+        "end_time": 341.52000000000004,
+        "text": " to create a list of items.  Another option is a link list  where each item has a pointer  to the next item in front of it.  Another option is a stack",
+        "audio_file": "chunk_39.wav"
+    },
+    {
+        "chunk_id": 40,
+        "start_time": 341.52000000000004,
+        "end_time": 350.72,
+        "text": " that follows the last end first out principle.  It's like stacking a set of plates  then when you want to access the data,  you pop the last one off the top.  The inverse option is a queue,",
+        "audio_file": "chunk_40.wav"
+    },
+    {
+        "chunk_id": 41,
+        "start_time": 350.72,
+        "end_time": 359.36,
+        "text": " which is first in first out.  Just like when you get into the breadline,  the first person there is the first one to be fed.  Now, another extremely useful data structure is the hash,",
+        "audio_file": "chunk_41.wav"
+    },
+    {
+        "chunk_id": 42,
+        "start_time": 359.36,
+        "end_time": 367.28000000000003,
+        "text": " which might also be called a map or dictionary.  It's like an array,  but instead of an index of integers,  you define the keys that point to each individual item,",
+        "audio_file": "chunk_42.wav"
+    },
+    {
+        "chunk_id": 43,
+        "start_time": 367.28000000000003,
+        "end_time": 375.6,
+        "text": " giving you a collection of key value pairs.  In many cases though, it's not efficient  to organize data in a linear way.  To address that problem, we have trees,",
+        "audio_file": "chunk_43.wav"
+    },
+    {
+        "chunk_id": 44,
+        "start_time": 375.6,
+        "end_time": 384.24,
+        "text": " which organize nodes together in a hierarchy  that can often be traversed more quickly.  This can sometimes be too rigid of a data structure though,  so instead, a graph can be created",
+        "audio_file": "chunk_44.wav"
+    },
+    {
+        "chunk_id": 45,
+        "start_time": 384.24,
+        "end_time": 393.76,
+        "text": " to connect multiple nodes together  in a virtually unlimited number of ways.  A graph has a node for the data  and an edge for the relationship between the data points.  Data structures are essential,",
+        "audio_file": "chunk_45.wav"
+    },
+    {
+        "chunk_id": 46,
+        "start_time": 393.92,
+        "end_time": 403.59999999999997,
+        "text": " but they don't do anything by themselves.  To do something useful, you'll need to code up an algorithm,  which is just code that solves a problem.  I took the initiative and creating the internet.",
+        "audio_file": "chunk_46.wav"
+    },
+    {
+        "chunk_id": 47,
+        "start_time": 403.59999999999997,
+        "end_time": 413.36,
+        "text": " In our code, we have several mechanisms  for implementing algorithms,  the most fundamental of which is a function,  which is a block of code that takes an input,  then does something, and returns an output.",
+        "audio_file": "chunk_47.wav"
+    },
+    {
+        "chunk_id": 48,
+        "start_time": 413.36,
+        "end_time": 421.76,
+        "text": " Like a variable, a function has a name,  and it can be called from other parts of your code  with different input parameters called arguments.  One thing you might do in the function body",
+        "audio_file": "chunk_48.wav"
+    },
+    {
+        "chunk_id": 49,
+        "start_time": 421.76,
+        "end_time": 430.79999999999995,
+        "text": " is compare one value to another.  Every language has a variety of built-in operators  like equality greater than and less than  that you can use to compare two values.",
+        "audio_file": "chunk_49.wav"
+    },
+    {
+        "chunk_id": 50,
+        "start_time": 430.79999999999995,
+        "end_time": 439.03999999999996,
+        "text": " If A is greater than B, then it forms a value of true,  but if B is greater than A, then the value is false.  True false is what's known as a Boolean data type,",
+        "audio_file": "chunk_50.wav"
+    },
+    {
+        "chunk_id": 51,
+        "start_time": 439.03999999999996,
+        "end_time": 448.0,
+        "text": " and whenever your code produces a value like this,  it's known as an expression,  but not all code will produce a value.  Sometimes your code will simply do something,  which is known as a statement.",
+        "audio_file": "chunk_51.wav"
+    },
+    {
+        "chunk_id": 52,
+        "start_time": 448.0,
+        "end_time": 456.72,
+        "text": " A good example is the if statement,  which handles conditional logic.  For example, if the condition is true,  it will execute this code,  otherwise it will short circuit,",
+        "audio_file": "chunk_52.wav"
+    },
+    {
+        "chunk_id": 53,
+        "start_time": 456.72,
+        "end_time": 464.56,
+        "text": " and run the code inside of the else block.  Another very common type of statement is a loop.  A while loop will run this block of code over and over again",
+        "audio_file": "chunk_53.wav"
+    },
+    {
+        "chunk_id": 54,
+        "start_time": 464.56,
+        "end_time": 473.92,
+        "text": " until the condition in the parentheses becomes false.  That can be useful, but more often than not,  you'll want to loop over an iterable data type like an array.  Most languages have a for loop",
+        "audio_file": "chunk_54.wav"
+    },
+    {
+        "chunk_id": 55,
+        "start_time": 473.92,
+        "end_time": 483.04,
+        "text": " that can run some code for every object in the array  or iterable data structure.  Now, in some cases, a function may not have an output,  which is generally called a void function.",
+        "audio_file": "chunk_55.wav"
+    },
+    {
+        "chunk_id": 56,
+        "start_time": 483.04,
+        "end_time": 492.88,
+        "text": " An interesting thing about functions  is that they can call themselves.  When a function calls itself, it's called recursion.  Because when done like this, by default,  it will recurse forever, creating an infinite loop.",
+        "audio_file": "chunk_56.wav"
+    },
+    {
+        "chunk_id": 57,
+        "start_time": 492.88,
+        "end_time": 501.52,
+        "text": " That happens because when you call a function,  the programming language will put it into memory  on what's known as the call stack,  which is a short-term chunk of memory  for executing your code.",
+        "audio_file": "chunk_57.wav"
+    },
+    {
+        "chunk_id": 58,
+        "start_time": 501.52,
+        "end_time": 510.15999999999997,
+        "text": " When a function keeps calling itself,  the language will keep pushing frames onto the call stack  until you get a stack overflow error.  To avoid this, your algorithm needs a base condition,",
+        "audio_file": "chunk_58.wav"
+    },
+    {
+        "chunk_id": 59,
+        "start_time": 510.24,
+        "end_time": 519.52,
+        "text": " so it knows when to terminate the loop.  Now, when you write an algorithm,  you'll need to determine if it's any good.  And the system for doing that is called big O notation.  It's a standard format for approximating",
+        "audio_file": "chunk_59.wav"
+    },
+    {
+        "chunk_id": 60,
+        "start_time": 519.52,
+        "end_time": 528.88,
+        "text": " the performance of an algorithm at scale.  It may reference time complexity,  which is how fast your algorithm will run,  and space complexity,  which deals with how much memory is required to run it.",
+        "audio_file": "chunk_60.wav"
+    },
+    {
+        "chunk_id": 61,
+        "start_time": 528.88,
+        "end_time": 537.6800000000001,
+        "text": " Developers have many different algorithm types  at their disposal.  The most crude option is brute force,  where you might loop over every possible combination  to hack somebody's credit card pin.",
+        "audio_file": "chunk_61.wav"
+    },
+    {
+        "chunk_id": 62,
+        "start_time": 537.76,
+        "end_time": 545.12,
+        "text": " A more sophisticated approach might be dividing conquer,  like binary search,  where you cut the problem in half multiple times,  until you find what you're looking for.",
+        "audio_file": "chunk_62.wav"
+    },
+    {
+        "chunk_id": 63,
+        "start_time": 545.12,
+        "end_time": 554.7199999999999,
+        "text": " Another option is dynamic programming algorithms,  where a problem is broken down  into multiple smaller subproblems.  And the result of each computation is stored for later use,",
+        "audio_file": "chunk_63.wav"
+    },
+    {
+        "chunk_id": 64,
+        "start_time": 554.7199999999999,
+        "end_time": 563.8399999999999,
+        "text": " using a technique called memoization.  That means if a function has already been called,  it will use the existing value,  instead of recomputing it again from scratch.  Then we have greedy algorithms",
+        "audio_file": "chunk_64.wav"
+    },
+    {
+        "chunk_id": 65,
+        "start_time": 563.8399999999999,
+        "end_time": 571.6,
+        "text": " that will make the choice that is most beneficial  in the short term,  without considering the problem as a whole.  One example of this is Dijkstra's shortest path algorithm.",
+        "audio_file": "chunk_65.wav"
+    },
+    {
+        "chunk_id": 66,
+        "start_time": 571.6,
+        "end_time": 581.12,
+        "text": " On the flip side, we have backtracking algorithms,  which take a more incremental approach  by looking at all of the possible options,  like a rat and a maze,  exploring all the different potential paths.",
+        "audio_file": "chunk_66.wav"
+    },
+    {
+        "chunk_id": 67,
+        "start_time": 581.12,
+        "end_time": 590.32,
+        "text": " Now when it comes to implementing your code,  there are always multiple ways to get the job done.  One programming paradigm is declarative,  where your code describes what the program does and the outcome,",
+        "audio_file": "chunk_67.wav"
+    },
+    {
+        "chunk_id": 68,
+        "start_time": 590.32,
+        "end_time": 598.8,
+        "text": " but doesn't care about things like control flow.  This style of programming is often associated  with functional languages like Haskell.  The other paradigm is imperative programming,",
+        "audio_file": "chunk_68.wav"
+    },
+    {
+        "chunk_id": 69,
+        "start_time": 598.8,
+        "end_time": 607.28,
+        "text": " where your code uses statements like if and while,  providing explicit instructions about how to produce an outcome.  It's associated with procedural languages like C.",
+        "audio_file": "chunk_69.wav"
+    },
+    {
+        "chunk_id": 70,
+        "start_time": 607.28,
+        "end_time": 615.4399999999999,
+        "text": " Today, most general-purpose languages like Python,  JavaScript, Kotlin, Swift, and so on are multi-paradigm,  which means they support all these options at the same time,",
+        "audio_file": "chunk_70.wav"
+    },
+    {
+        "chunk_id": 71,
+        "start_time": 615.4399999999999,
+        "end_time": 623.68,
+        "text": " in addition to object-oriented programming.  The idea behind UPE is that you use classes  to write a blueprint for the data or objects in your code.",
+        "audio_file": "chunk_71.wav"
+    },
+    {
+        "chunk_id": 72,
+        "start_time": 623.76,
+        "end_time": 632.7199999999999,
+        "text": " A class can encapsulate variables,  which are commonly called properties,  as well as functions,  which are usually called methods in this context.  It's a common way to organize and reuse code,",
+        "audio_file": "chunk_72.wav"
+    },
+    {
+        "chunk_id": 73,
+        "start_time": 632.7199999999999,
+        "end_time": 642.56,
+        "text": " because classes can share behaviors between each other  through inheritance,  where a subclass can extend and override the behaviors  of the parent class,  and it opens the door to all kinds of other ideas",
+        "audio_file": "chunk_73.wav"
+    },
+    {
+        "chunk_id": 74,
+        "start_time": 642.56,
+        "end_time": 652.0,
+        "text": " called design patterns.  Now, a class by itself doesn't actually do anything.  Instead, it's used to instantiate objects,  which are actual chunks of data  that live in your computer's memory.",
+        "audio_file": "chunk_74.wav"
+    },
+    {
+        "chunk_id": 75,
+        "start_time": 652.08,
+        "end_time": 661.6,
+        "text": " Often, you'll want to reference the same object  over and over again in your code.  When data is long lived,  it can't go in the call stack.  Instead, most languages have a separate area of memory  called the heap,",
+        "audio_file": "chunk_75.wav"
+    },
+    {
+        "chunk_id": 76,
+        "start_time": 661.6,
+        "end_time": 671.28,
+        "text": " which unlike the call stack can grow and shrink  based on how your application is used.  It also allows you to pass objects by reference,  which means you can use the same object  in multiple variables",
+        "audio_file": "chunk_76.wav"
+    },
+    {
+        "chunk_id": 77,
+        "start_time": 671.28,
+        "end_time": 679.44,
+        "text": " without increasing the memory footprint,  because it always points to the same chunk of memory in the heap.  Now, what's interesting is that if we go back to the CPU  that we talked about in the beginning,",
+        "audio_file": "chunk_77.wav"
+    },
+    {
+        "chunk_id": 78,
+        "start_time": 679.44,
+        "end_time": 687.92,
+        "text": " you'll notice that it contains multiple threads.  A thread takes the physical CPU core  and breaks it into virtual cores  that allow it to run code simultaneously.",
+        "audio_file": "chunk_78.wav"
+    },
+    {
+        "chunk_id": 79,
+        "start_time": 687.92,
+        "end_time": 697.4399999999999,
+        "text": " There are some programming languages that support parallelism  where you can write code that literally executes  on two different threads at the same time.  However, many languages out there are only single threaded,",
+        "audio_file": "chunk_79.wav"
+    },
+    {
+        "chunk_id": 80,
+        "start_time": 697.4399999999999,
+        "end_time": 706.88,
+        "text": " but that doesn't mean they can't do two things at the same time.  Instead, they implement concurrency models  like an event loop or co-routines  that can pause or delay the normal execution of code",
+        "audio_file": "chunk_80.wav"
+    },
+    {
+        "chunk_id": 81,
+        "start_time": 706.88,
+        "end_time": 716.3199999999999,
+        "text": " to handle multiple jobs on a single thread at the same time.  Now, in modern computing,  we're rarely working with the bare metal CPU and RAM.  Instead, we work in the cloud with a virtual machine,",
+        "audio_file": "chunk_81.wav"
+    },
+    {
+        "chunk_id": 82,
+        "start_time": 716.3199999999999,
+        "end_time": 726.0,
+        "text": " which is just a piece of software that simulates hardware.  That allows us to take really big computers  and split them up into a bunch of smaller virtual computers.  These machines are the backbone of the internet",
+        "audio_file": "chunk_82.wav"
+    },
+    {
+        "chunk_id": 83,
+        "start_time": 726.0,
+        "end_time": 734.56,
+        "text": " and are connected via the internet protocol.  Each machine has a unique IP address  to identify it on the network.  That IP address is usually aliased to a URL",
+        "audio_file": "chunk_83.wav"
+    },
+    {
+        "chunk_id": 84,
+        "start_time": 734.56,
+        "end_time": 742.56,
+        "text": " that is registered in a global database  called the DomainName Service.  Now, to establish a connection,  the two computers will perform a TCP handshake,",
+        "audio_file": "chunk_84.wav"
+    },
+    {
+        "chunk_id": 85,
+        "start_time": 742.56,
+        "end_time": 751.44,
+        "text": " which will allow them to exchange messages called packets.  On top of that, there's usually a security layer  like SSL to encrypt and decrypt the messages over the network.",
+        "audio_file": "chunk_85.wav"
+    },
+    {
+        "chunk_id": 86,
+        "start_time": 751.44,
+        "end_time": 759.92,
+        "text": " Now, the two computers can securely share data  with the Hypertext Transfer Protocol.  The client may request a web page,  then the server will respond with some HTML.",
+        "audio_file": "chunk_86.wav"
+    },
+    {
+        "chunk_id": 87,
+        "start_time": 759.92,
+        "end_time": 768.88,
+        "text": " Modern servers provide a standardized way  for a client to request data,  which is called an application programming interface or API.  The most common architecture is REST,",
+        "audio_file": "chunk_87.wav"
+    },
+    {
+        "chunk_id": 88,
+        "start_time": 768.88,
+        "end_time": 778.32,
+        "text": " where URLs are mapped to different data entities  available on the server.  And that brings us to our final topic,  MotherFnPrinters.  You're going to need to learn how these things work inside and out,",
+        "audio_file": "chunk_88.wav"
+    },
+    {
+        "chunk_id": 89,
+        "start_time": 778.32,
+        "end_time": 786.96,
+        "text": " because every time you go to grandma's house,  she's going to ask you to fix it,  which shouldn't be a problem for a computer scientist like you.  Thanks for watching, and I will see you in the next one.",
+        "audio_file": "chunk_89.wav"
+    }
+]

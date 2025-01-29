@@ -1,0 +1,73 @@
+2025-01-29 10:33:52,745 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 10:33:52,752 - werkzeug - INFO -  * Debugger PIN: 133-918-328
+2025-01-29 10:34:27,028 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Tej Bachhav\\Semantic Video Segmentation System\\app1.py', reloading
+2025-01-29 10:34:53,241 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.125.48.107:5000
+2025-01-29 10:34:53,241 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 10:34:53,247 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 10:34:57,696 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 10:34:57,696 - werkzeug - INFO -  * Debugger PIN: 133-918-328
+2025-01-29 10:35:02,923 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:35:02] "GET / HTTP/1.1" 200 -
+2025-01-29 10:35:17,790 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:35:17] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+2025-01-29 10:35:51,045 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:35:51] "[35m[1mPOST /upload HTTP/1.1[0m" 202 -
+2025-01-29 10:35:51,252 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:35:51] "[35m[1mGET /status/7cbdd6e0-1043-4927-8b98-9998ffe34473 HTTP/1.1[0m" 500 -
+2025-01-29 10:35:57,266 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:35:57] "[35m[1mPOST /upload HTTP/1.1[0m" 202 -
+2025-01-29 10:35:57,424 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:35:57] "[35m[1mGET /status/fbb95432-fa70-43d1-8cdd-6eed1c68fff0 HTTP/1.1[0m" 500 -
+2025-01-29 10:38:05,618 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Tej Bachhav\\Semantic Video Segmentation System\\app1.py', reloading
+2025-01-29 10:38:06,643 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 10:38:12,722 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 10:38:12,736 - werkzeug - INFO -  * Debugger PIN: 133-918-328
+2025-01-29 10:38:46,399 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Tej Bachhav\\Semantic Video Segmentation System\\app1.py', reloading
+2025-01-29 10:38:47,317 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 10:38:51,622 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 10:38:51,622 - werkzeug - INFO -  * Debugger PIN: 133-918-328
+2025-01-29 10:39:03,001 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.125.48.107:5000
+2025-01-29 10:39:03,001 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 10:39:03,004 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 10:39:08,042 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 10:39:08,048 - werkzeug - INFO -  * Debugger PIN: 133-918-328
+2025-01-29 10:39:08,234 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:39:08] "GET / HTTP/1.1" 200 -
+2025-01-29 10:39:13,858 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:39:13] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+2025-01-29 10:39:22,410 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:39:22] "[35m[1mPOST /upload HTTP/1.1[0m" 202 -
+2025-01-29 10:39:22,629 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:39:22] "GET /status/c59b2efd-9b38-4552-86a2-529371293b42 HTTP/1.1" 200 -
+2025-01-29 10:47:04,087 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Tej Bachhav\\Semantic Video Segmentation System\\app1.py', reloading
+2025-01-29 10:47:05,131 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 10:47:10,503 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 10:47:10,507 - werkzeug - INFO -  * Debugger PIN: 133-918-328
+2025-01-29 10:47:18,457 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:47:18] "GET / HTTP/1.1" 200 -
+2025-01-29 10:47:19,990 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:47:19] "GET / HTTP/1.1" 200 -
+2025-01-29 10:47:24,739 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:47:24] "[35m[1mPOST /upload HTTP/1.1[0m" 202 -
+2025-01-29 10:47:24,946 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:47:24] "GET /status/fb8e21e9-9766-4fbf-89e1-b6a7b6d17524 HTTP/1.1" 200 -
+2025-01-29 10:48:33,208 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:48:33] "[35m[1mPOST /upload HTTP/1.1[0m" 202 -
+2025-01-29 10:48:33,413 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:48:33] "GET /status/5b725417-bd04-42e8-930c-29706e565beb HTTP/1.1" 200 -
+2025-01-29 10:53:40,038 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Tej Bachhav\\Semantic Video Segmentation System\\app1.py', reloading
+2025-01-29 10:53:41,005 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 10:53:45,602 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 10:53:45,615 - werkzeug - INFO -  * Debugger PIN: 133-918-328
+2025-01-29 10:53:47,671 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:53:47] "GET / HTTP/1.1" 200 -
+2025-01-29 10:53:55,554 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:53:55] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+2025-01-29 10:56:32,374 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Tej Bachhav\\Semantic Video Segmentation System\\app1.py', reloading
+2025-01-29 10:56:32,908 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 10:56:38,171 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 10:56:38,171 - werkzeug - INFO -  * Debugger PIN: 133-918-328
+2025-01-29 10:56:59,867 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Tej Bachhav\\Semantic Video Segmentation System\\app1.py', reloading
+2025-01-29 10:57:00,790 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 10:57:11,782 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.125.48.107:5000
+2025-01-29 10:57:11,783 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 10:57:11,784 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 10:57:16,788 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 10:57:16,788 - werkzeug - INFO -  * Debugger PIN: 133-918-328
+2025-01-29 10:57:17,359 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:57:17] "GET / HTTP/1.1" 200 -
+2025-01-29 10:57:26,664 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:57:26] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+2025-01-29 10:57:56,534 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:57:56] "[35m[1mPOST /upload HTTP/1.1[0m" 202 -
+2025-01-29 10:57:56,566 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 10:57:56] "GET /status/d9ab7acf-8957-4cee-8d80-02103632684f HTTP/1.1" 200 -
+2025-01-29 11:40:17,498 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Tej Bachhav\\Semantic Video Segmentation System\\app2.py', reloading
+2025-01-29 11:40:18,949 - werkzeug - INFO -  * Restarting with stat

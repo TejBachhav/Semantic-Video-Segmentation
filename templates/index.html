@@ -1,0 +1,207 @@
+<!-- # templates/index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Upload</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .upload-container {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .progress { 
+            margin: 20px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+        #status { 
+            margin: 20px 0;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 4px;
+            display: none;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Video for Processing</h1>
+    <div class="upload-container">
+        <form id="uploadForm">
+            <input type="file" name="video" accept=".mp4,.avi,.mov,.wmv" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <div id="status"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#uploadForm').on('submit', function(e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                $('#status').show().text('Uploading...');
+                
+                $.ajax({
+                    url: '/upload',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        checkStatus(response.task_id);
+                    },
+                    error: function() {
+                        $('#status').text('Upload failed').css('background', '#ffebee');
+                    }
+                });
+            });
+
+            function checkStatus(taskId) {
+                $.get('/status/' + taskId, function(response) {
+                    $('#status').text('Status: ' + response.status);
+                    
+                    if (response.state === 'SUCCESS') {
+                        $('#status').text('Processing complete! Redirecting...');
+                        window.location.href = response.redirect_url;
+                    } else if (response.state !== 'FAILURE') {
+                        setTimeout(function() {
+                            checkStatus(taskId);
+                        }, 2000);
+                    } else {
+                        $('#status')
+                            .text('Error: ' + response.error)
+                            .css('background', '#ffebee');
+                    }
+                }).fail(function() {
+                    $('#status')
+                        .text('Error checking status')
+                        .css('background', '#ffebee');
+                });
+            }
+        });
+    </script>
+</body>
+</html> -->
+
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Processor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8">Video Processor</h1>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Upload Video</h2>
+            <form id="uploadForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Video File</label>
+                    <input type="file" name="video" accept=".mp4,.avi,.mov,.wmv" class="mt-1 block w-full">
+                </div>
+                
+                <!-- <div class="- divider text-center my-4">OR</div> -->
+                
+                <!-- <div>
+                    <label class="block text-sm font-medium text-gray-700">YouTube URL</label>
+                    <input type="text" name="youtube_url" placeholder="https://www.youtube.com/watch?v=..." 
+                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div> -->
+                
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
+                    Upload
+                </button>
+            </form>
+        </div>
+        
+        <div id="status" class="hidden bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-4">Processing Status</h2>
+            <div id="statusMessage" class="text-gray-700"></div>
+            <div class="mt-4">
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div id="progressBar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const uploadForm = document.getElementById('uploadForm');
+        const statusDiv = document.getElementById('status');
+        const statusMessage = document.getElementById('statusMessage');
+        const progressBar = document.getElementById('progressBar');
+
+        uploadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(uploadForm);
+            
+            try {
+                statusDiv.classList.remove('hidden');
+                statusMessage.textContent = 'Uploading...';
+                progressBar.style.width = '10%';
+                
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!response.ok) throw new Error('Upload failed');
+                
+                const data = await response.json();
+                checkStatus(data.task_id);
+                
+            } catch (error) {
+                statusMessage.textContent = `Error: ${error.message}`;
+            }
+        });
+
+        async function checkStatus(taskId) {
+            try {
+                const response = await fetch(`/status/${taskId}`);
+                const data = await response.json();
+                
+                statusMessage.textContent = `Status: ${data.status}`;
+                
+                if (data.state === 'PROCESSING') {
+                    progressBar.style.width = '50%';
+                    setTimeout(() => checkStatus(taskId), 2000);
+                } else if (data.state === 'SUCCESS') {
+                    progressBar.style.width = '100%';
+                    window.location.href = data.redirect_url;
+                } else if (data.state === 'FAILURE') {
+                    statusMessage.textContent = `Error: ${data.error}`;
+                }
+                
+            } catch (error) {
+                statusMessage.textContent = `Error checking status: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>

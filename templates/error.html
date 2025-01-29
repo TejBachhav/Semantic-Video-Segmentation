@@ -1,0 +1,59 @@
+<!-- templates/error.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .error { 
+            color: #d32f2f;
+            padding: 20px;
+            background: #ffebee;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Error</h1>
+    <p class="error">{{ error }}</p>
+    <a href="{{ url_for('index') }}" class="back-link">Return to Home</a>
+</body>
+</html> -->
+
+<!-- templates/error.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-8">
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h1 class="text-2xl font-bold text-red-600 mb-4">Error</h1>
+            <p class="text-gray-700">{{ error }}</p>
+            <a href="/" class="mt-4 inline-block text-blue-500 hover:text-blue-600">Return to Home</a>
+        </div>
+    </div>
+</body>
+</html>

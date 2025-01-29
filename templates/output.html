@@ -1,0 +1,152 @@
+<!-- templates/output.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing Results</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .chunk { 
+            margin: 20px 0; 
+            padding: 20px; 
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #f9f9f9;
+        }
+        .chunk-text { 
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        audio { 
+            width: 100%;
+            margin: 10px 0;
+        }
+        .time-info {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Processing Results</h1>
+    
+    {% for chunk in chunks %}
+    <div class="chunk">
+        <h3>Chunk {{ chunk.chunk_id }}</h3>
+        <p class="chunk-text"><strong>Text:</strong> {{ chunk.text }}</p>
+        <p class="time-info"><strong>Time:</strong> {{ "%.2f"|format(chunk.start_time) }}s - {{ "%.2f"|format(chunk.end_time) }}s</p>
+        <audio controls>
+            <source src="{{ url_for('download_file', processing_id=processing_id, filename=chunk.audio_file) }}" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    {% endfor %}
+    
+    <a href="{{ url_for('index') }}" class="back-link">Process Another Video</a>
+</body>
+</html> -->
+
+<!-- templates/output.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8">Processing Results</h1>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <!-- <h2 class="text-xl font-semibold mb-4">Ask Questions About the Video</h2>
+            <div class="space-y-4">
+                <input type="text" id="queryInput" placeholder="Ask a question..." 
+                       class="w-full rounded-md border-gray-300 shadow-sm p-2">
+                <button onclick="submitQuery()" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
+                    Ask
+                </button>
+            </div> -->
+            
+            <div id="queryResult" class="mt-6 hidden">
+                <h3 class="font-semibold mb-2">Answer:</h3>
+                <div id="answer" class="text-gray-700 mb-4"></div>
+                
+                <h3 class="font-semibold mb-2">Relevant Segments:</h3>
+                <div id="sources" class="text-gray-600 text-sm"></div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-4">Transcript Chunks</h2>
+            <div class="space-y-4">
+                {% for chunk in chunks %}
+                <div class="border rounded-md p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-medium">Chunk {{ chunk.chunk_id }}</span>
+                        <span class="text-sm text-gray-500">
+                            {{ "%.2f"|format(chunk.start_time) }}s - {{ "%.2f"|format(chunk.end_time) }}s
+                        </span>
+                    </div>
+                    <p class="text-gray-700 mb-2">{{ chunk.text }}</p>
+                    <audio controls class="w-full">
+                        <source src="{{ url_for('download_file', processing_id=processing_id, filename=chunk.audio_file) }}" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function submitQuery() {
+            const queryInput = document.getElementById('queryInput');
+            const queryResult = document.getElementById('queryResult');
+            const answer = document.getElementById('answer');
+            const sources = document.getElementById('sources');
+            
+            try {
+                const response = await fetch(`/query/{{ processing_id }}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query: queryInput.value })
+                });
+                
+                if (!response.ok) throw new Error('Query failed');
+                
+                const data = await response.json();
+                queryResult.classList.remove('hidden');
+                answer.textContent = data.answer;
+                sources.innerHTML = data.source_chunks.map(chunk => 
+                    `<div class="mb-2 p-2 bg-gray-50 rounded">${chunk}</div>`
+                ).join('');
+                
+            } catch (error) {
+                answer.textContent = `Error: ${error.message}`;
+                sources.innerHTML = '';
+                queryResult.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
